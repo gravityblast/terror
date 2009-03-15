@@ -8,7 +8,11 @@ Installation
 
 	sudo gem install sinatra feed-normalizer	
 	git clone git://github.com/pilu/terror.git
-	cd terror
+	
+Configuration
+---
+
+	cd path/to/terror
 	cp config/terror.yml.default config/terror.yml
 	
 Edit the terror.yml file adding your feeds and database preferences.
