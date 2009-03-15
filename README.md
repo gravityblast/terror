@@ -20,4 +20,4 @@ Fetching feeds
 
 Enjoy
 
- ruby terror_aggregator.rb
+	ruby terror_aggregator.rb
