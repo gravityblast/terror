@@ -1,0 +1,7 @@
+database:
+  adapter: sqlite3
+  database: db/terror.sqlite3
+feeds:
+  - http://example.com/rss
+  - http://example.com/rss2
+  - http://example.com/atom

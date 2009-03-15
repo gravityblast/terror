@@ -1,0 +1,6 @@
+require 'rubygems'
+require 'sinatra'
+require 'sinatra/test'
+require 'spec'
+require 'spec/interop/test'
+require File.dirname(__FILE__) + '/../terror_aggregator'

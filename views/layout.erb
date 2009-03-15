@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><%= config['terror']['title'] %> | <%= config['terror']['subtitle'] %></title>	
+	<link rel="stylesheet" href="/style.css" type="text/css" charset="utf-8" />
+	<link rel="alternate" href="/feed" type="application/atom+xml" title="Atom" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1><a href="/" title="<%= config['terror']['title'] %>"><%= config['terror']['title'] %></a></h1>
+			<p class="subtitle"><%= config['terror']['subtitle'] %></p>
+		</div>
+		<div id="content">			
+			<%= yield %>
+		</div>
+		<div class="pagination">
+			<% if newer_page? %><a class="newer" href="/?page=<%= newer_page %>">« Newer</a><% end %>
+			<% if older_page? %><a class="older" href="/?page=<%= older_page %>">Older »</a><% end %>
+		</div>
+		<div id="footer">
+			Powered by Terror
+		</div>
+	</div>
+</body>
+</html>

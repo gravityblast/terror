@@ -1,0 +1,13 @@
+<% unless @posts.empty? %>
+	<% each_post do |post, new_date| %>
+		<div class="post">
+			<% if new_date %>
+				<p class="date"><%= new_date.strftime("%m/%d/%y") %></p>
+			<% end %>
+			<h2><a href="<%= post.url %>"><%= post.title %></a></h2>
+			<p class="source"><%= post.source %></p>
+		</div>
+	<% end %>
+<% else %>
+	<p>No post fetched yet. Run the feeds:fetch rake task.</p>
+<% end %>
