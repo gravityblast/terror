@@ -6,7 +6,7 @@ A micro feed aggregator based on [Sinatra](http://www.sinatrarb.com/)
 Installation
 ---
 
-	sudo gem install sinatra feed-normalizer	
+	sudo gem install sinatra feed-normalizer activerecord
 	git clone git://github.com/pilu/terror.git
 	
 Configuration
