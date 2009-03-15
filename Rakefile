@@ -1,4 +1,3 @@
-require 'sinatra'
 require File.dirname(__FILE__) + '/lib/terror'
 
 namespace :feeds do

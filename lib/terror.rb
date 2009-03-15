@@ -1,6 +1,7 @@
 $LOAD_PATH << File.dirname(__FILE__) + '/terror'
 require 'rubygems'
 require 'activerecord'
+require 'sinatra'
 require 'yaml'
 require 'post'
 require 'helper'
