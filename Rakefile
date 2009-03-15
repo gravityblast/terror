@@ -6,7 +6,7 @@ namespace :feeds do
   task :fetch do
     Terror.init
     Terror.config['feeds'].each do |url|
-      Terror::Post.fetch(url)
+      Terror::Post.fetch_all(url)
     end
   end
 end

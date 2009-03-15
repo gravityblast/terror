@@ -10,16 +10,18 @@
 </head>
 <body>
 	<div id="container">
-		<div id="header">
-			<h1><a href="/" title="<%= config['global']['title'] %>"><%= config['global']['title'] %></a></h1>
-			<p class="subtitle"><%= config['global']['subtitle'] %></p>
-		</div>
-		<div id="content">			
-			<%= yield %>
-		</div>
-		<div class="pagination">
-			<% if newer_page? %><a class="newer" href="/?page=<%= newer_page %>">« Newer</a><% end %>
-			<% if older_page? %><a class="older" href="/?page=<%= older_page %>">Older »</a><% end %>
+		<div id="wrapper">
+			<div id="header">
+				<h1><a href="/" title="<%= config['global']['title'] %>"><%= config['global']['title'] %></a></h1>
+				<p class="subtitle"><%= config['global']['subtitle'] %></p>
+			</div>
+			<div id="content">			
+				<%= yield %>
+			</div>
+			<div class="pagination">
+				<% if newer_page? %><a class="newer" href="/?page=<%= newer_page %>">« Newer</a><% end %>
+				<% if older_page? %><a class="older" href="/?page=<%= older_page %>">Older »</a><% end %>
+			</div>			
 		</div>
 		<div id="footer">
 			Powered by Terror

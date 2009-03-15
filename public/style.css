@@ -58,15 +58,18 @@ body {
 	font-family: helvetica,arial,sans-serif;
 }
 
-#container {
-	background: #FFF;
+#container {	
 	text-align: left;
-	width: 400px;
-	margin: 0 auto;
+	width: 460px;
+	margin: 0 auto;	
+}
+
+#wrapper {
+	background: #FFF;
 	padding: 10px 20px;
-	border-left: 1px solid #999;
-	border-right: 1px solid #999;
-	border-bottom: 10px solid #999;
+	border-left: 2px solid #009D57;
+	border-right: 2px solid #009D57;
+	border-bottom: 2px solid #009D57;
 }
 
 #header {
@@ -76,28 +79,28 @@ body {
 
 #header h1 a:link, #header h1 a:visited, #header h1 a:hover, #header h1 a:active {
 	font-size: 35px;	
-	color: #BBB;
+	color: #009D57;
 	text-decoration: none;
 }
 
 #header p.subtitle {
 	font-size: 15px;
 	font-style: italic;
-	color: #BBB;	
+	color: #2BAA9C;	
 }
 
 .post p.date {
 	text-align: right;
 	border-bottom: 1px solid #EEE;
 	font-size: 13px;
-	color: #AAA;
+	color: #2BAA9C;
 	padding-bottom: 1px;
 	margin-bottom: 10px;
 	font-style: italic;
 }
 
 .post p.source {
-	color: #AAA;
+	color: #2BAA9C;
 	font-style: italic;
 }
 
@@ -110,7 +113,7 @@ body {
 }
 
 .post h2 a:link, .post h2 a:visited, .post h2 a:hover, .post h2 a:active {
-	color: #429CF5;
+	color: #009D57;
 	text-decoration: none;
 }
 
@@ -121,13 +124,14 @@ body {
 
 .pagination a:link, .pagination a:visited, .pagination a:hover, .pagination a:active {
 	padding: 2px 5px;
-	border: 1px solid #AAA;
+	border: 1px solid #2BAA9C;
 	text-decoration: none;
-	color: #429CF5;
+	color: #2BAA9C;
 }
 
 #footer {
-	color: #BBB;
+	color: #AAA;
 	text-align: right;
 	font-size: 11px;
+	padding: 5px 0;
 }
