@@ -4,15 +4,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title><%= config['terror']['title'] %> | <%= config['terror']['subtitle'] %></title>	
+	<title><%= config['global']['title'] %> | <%= config['global']['subtitle'] %></title>	
 	<link rel="stylesheet" href="/style.css" type="text/css" charset="utf-8" />
 	<link rel="alternate" href="/feed" type="application/atom+xml" title="Atom" />
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><a href="/" title="<%= config['terror']['title'] %>"><%= config['terror']['title'] %></a></h1>
-			<p class="subtitle"><%= config['terror']['subtitle'] %></p>
+			<h1><a href="/" title="<%= config['global']['title'] %>"><%= config['global']['title'] %></a></h1>
+			<p class="subtitle"><%= config['global']['subtitle'] %></p>
 		</div>
 		<div id="content">			
 			<%= yield %>
