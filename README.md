@@ -25,3 +25,7 @@ Fetching feeds
 Enjoy
 
 	ruby terror_aggregator.rb
+	
+== Copyright
+
+Copyright (c) 2009 Andrea Franz. See LICENSE for details.
