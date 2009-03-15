@@ -135,3 +135,7 @@ body {
 	font-size: 11px;
 	padding: 5px 0;
 }
+
+#footer a:link, #footer a:visited, #footer a:hover, #footer a:active {
+	color: #AAA;
+}
