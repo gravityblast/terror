@@ -21,7 +21,7 @@ module Terror
           :url => entry.url, 
           :source => feed.title, 
           :date => entry.date_published
-        ) unless Post.exists?(:url => entry.url)
+        )  unless self.get(:first, :url => entry.url)
       end
     end
     

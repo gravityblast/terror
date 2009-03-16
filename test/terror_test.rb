@@ -5,7 +5,7 @@ describe 'Test' do
   
   it 'should show posts' do
     get '/'
-    response.should be_ok    
+    response.should be_ok
   end
   
   it 'should show feed' do

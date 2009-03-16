@@ -8,14 +8,14 @@ builder do |xml|
               :rel  => 'alternate'
     xml.link  :type => 'application/atom+xml',
               :href => 'http://localhost:4567'    
-    xml.updated(rfc_3339(@posts.first ? @posts.first.created_at : Time.now))
+    xml.updated(rfc_3339(@posts.first ? @posts.first.date : Time.now))
     @posts.each do |post|
       xml.entry do |entry|
         entry.id post.url
         entry.link  :type => 'text/html',
                     :href => post.url,
                     :rel  => 'alternate'
-        entry.updated rfc_3339(post.created_at)
+        entry.updated rfc_3339(post.date)
         entry.title post.title
         entry.author do |author|
           author.name post.source

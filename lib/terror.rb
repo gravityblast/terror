@@ -1,6 +1,7 @@
 $LOAD_PATH << File.dirname(__FILE__) + '/terror'
 require 'rubygems'
-require 'activerecord'
+require 'dm-core'
+require 'dm-more'
 require 'sinatra'
 require 'yaml'
 require 'post'
@@ -23,27 +24,11 @@ module Terror
   
   def self.init_database    
     init_database_connection
-    init_database_tables
   end
   
   def self.init_database_connection
-    ActiveRecord::Base.establish_connection(self.config['database'][Sinatra::Application.environment.to_s])
+    DataMapper.setup(:default, self.config['database'][Sinatra::Application.environment.to_s])
+    DataMapper.auto_upgrade!
   end
-  
-  def self.init_database_tables
-    ActiveRecord::Schema.define do
-      create_table :posts do |t|
-        t.string    :title
-        t.string    :source
-        t.string    :url   
-        t.datetime  :date
-        t.datetime  :created_at
-      end
-      add_index :posts, :url
-      add_index :posts, :date
-    end
-  rescue ActiveRecord::StatementInvalid
-    # tables already exist
-  end
-  
+    
 end
