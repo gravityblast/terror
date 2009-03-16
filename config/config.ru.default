@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'rubygems'
 require 'sinatra'
-gem     'terror', '= 0.2.1'
 require 'terror'
 
 require File.join(Terror.root, 'terror_aggregator')
