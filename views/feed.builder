@@ -20,7 +20,7 @@ builder do |xml|
         entry.author do |author|
           author.name post.source
         end
-        entry.content post.url
+        entry.content %|<a href="#{post.url}" title="#{post.title}">#{post.url}</a>|, :type => :html
       end
     end
   end

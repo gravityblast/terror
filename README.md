@@ -6,27 +6,26 @@ A micro feed aggregator based on [Sinatra](http://www.sinatrarb.com/)
 Installation
 ---
 
-	sudo gem install sinatra feed-normalizer activerecord
-	git clone git://github.com/pilu/terror.git
+	gem sources -a http://gems.github.com
+	sudo gem install pilu-terror
 	
-Configuration
+Creating a new aggrgator
 ---
 
-	cd path/to/terror
-	cp config/terror.yml.default config/terror.yml
+	terror new_aggregator_name
+	cd new_aggregator_name
+	thin start -C config/thin.yml
 	
-Edit the terror.yml file adding your feeds and database preferences.
+Edit the config/terror.yml file adding your feeds and database preferences.
 
 Fetching feeds
 ---
-
+		
 	rake feeds:fetch
 
-Enjoy
-
-	ruby terror_aggregator.rb
+Enjoy	
 	
 Copyright
 ---
 
-Copyright (c) 2009 Andrea Franz. See LICENSE for details.
+Copyright (c) 2009 [Andrea Franz](http://gravityblast.com). See LICENSE for details.

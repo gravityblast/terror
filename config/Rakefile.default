@@ -1,0 +1,5 @@
+require 'rubygems'
+require 'terror'
+Dir["#{Terror.root}/lib/**/*.rake"].each{|ext| load ext}
+
+set :root, File.expand_path('.')

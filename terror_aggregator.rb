@@ -10,7 +10,7 @@ helpers   { include Terror::Helper }
 set :root, File.dirname(__FILE__)
 
 before do
-  @posts = Terror::Post.paginate(:per_page => 20, :page => params[:page])
+  @posts = Terror::Post.paginate(:per_page => 20, :page => params[:page])  
 end
 
 get '/' do

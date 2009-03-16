@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require File.dirname(__FILE__) + '/../lib/terror/installer'
+
+Signal.trap("INT") { puts; exit }
+
+if ARGV.size == 1
+  Terror::Installer.new(ARGV.first).start
+else
+  puts "Usage: terror project_name"
+end
+

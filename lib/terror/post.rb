@@ -17,8 +17,8 @@ module Terror
     protected  
     
     def self.add_pagination_info(posts, per_page, page)
-      posts.class_eval { attr_accessor :current_page, :total_pages }
-      posts.total_pages   = (self.count / per_page).ceil
+      posts.class_eval { attr_accessor :current_page, :total_pages }      
+      posts.total_pages   = (self.count.to_f / per_page).ceil
       posts.current_page  = page
       posts
     end    

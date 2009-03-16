@@ -1,0 +1,11 @@
+environment: production
+chdir: <%= root %>
+address: 127.0.0.1
+port: 9000
+pid: <%= root %>/tmp/thin.pid
+rackup: <%= root %>/config.ru
+log: <%= root %>/log/thin.log
+max_conns: 1024
+timeout: 30
+max_persistent_conns: 512
+daemonize: true

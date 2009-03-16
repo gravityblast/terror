@@ -12,8 +12,12 @@ module Terror
     attr_accessor :config
   end
   
+  def self.root
+    File.expand_path(File.dirname(__FILE__) + '/..')
+  end
+  
   def self.init(config = nil)
-    self.config = config.nil? ? YAML.load_file(File.dirname(__FILE__) + '/../config/terror.yml') : config
+    self.config = config.nil? ? YAML.load_file(File.join(Sinatra::Application.root, 'config', 'terror.yml')) : config
     self.init_database
   end
   

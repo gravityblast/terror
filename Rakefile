@@ -1,38 +1,29 @@
 require 'rubygems'
 require 'rake'
 require File.dirname(__FILE__) + '/lib/terror'
+Dir["#{Terror.root}/lib/**/*.rake"].each{|ext| load ext}
 
-namespace :feeds do
-  desc 'Fetch all feeds'
-  task :fetch do
-    Terror.init
-    Terror.config['feeds'].each do |url|
-      Terror::Post.fetch_all(url)
-    end
-  end
-end
+set :root, File.join(Terror.root)
 
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "terror"
-    gem.summary = %Q{TODO}
-    gem.email = "andrea@gravityblast.com"
-    gem.homepage = "http://github.com/pilu/terror"
-    gem.authors = ["Andrea Franz"]
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+    files  = `git ls-files`.split("\n").reject {|f| File.basename(f) =~ /^\.git/ }
+    
+    gem.name        = 'terror'
+    gem.summary     = 'Terror the micro feed aggregator'
+    gem.email       = "andrea@gravityblast.com"
+    gem.homepage    = "http://gravityblast.com/projects/terror/"
+    gem.authors     = ["Andrea Franz"]
+    gem.files       = files
+    gem.executables = ['terror']
+    gem.post_install_message = 'Run terror projectname and start aggregating.'
+
+    gem.add_dependency 'sinatra', ['>= 0.9.1.1']
+    gem.add_dependency 'feed-normalizer', ['>= 1.5.1']
+    gem.add_dependency 'activerecord', ['>= 2.2.2']
   end
 rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
-end
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = 'terror'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
 end
 
 require 'rake/testtask'

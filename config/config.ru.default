@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'sinatra'
+gem     'terror', '= 0.2.0'
+require 'terror'
+
+require File.join(Terror.root, 'terror_aggregator')
+
+root_dir          = File.dirname(__FILE__)
+set :environment, :production
+set :root,        root_dir
+set :public,      root_dir + '/public'
+set :views,       File.join(Terror.root, 'views')
+disable :run
+
+run Sinatra::Application
