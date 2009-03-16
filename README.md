@@ -9,7 +9,7 @@ Installation
 	gem sources -a http://gems.github.com
 	sudo gem install pilu-terror
 	
-Creating a new aggrgator
+Creating a new aggregator
 ---
 
 	terror new_aggregator_name

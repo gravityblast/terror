@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{terror}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email = %q{andrea@gravityblast.com}
   s.executables = ["terror"]
   s.extra_rdoc_files = ["README.md", "LICENSE"]
-  s.files = ["LICENSE", "README.md", "Rakefile", "VERSION.yml", "bin/terror", "config/Rakefile.default", "config/config.ru.default", "config/terror.yml.default", "config/thin.yml.default", "lib/tasks/feeds.rake", "lib/terror.rb", "lib/terror/feed_fetcher.rb", "lib/terror/helper.rb", "lib/terror/installer.rb", "lib/terror/post.rb", "public/style.css", "terror_aggregator.rb", "test/feeds/example.xml", "test/post_test.rb", "test/spec_helper.rb", "test/terror_test.rb", "views/feed.builder", "views/index.erb", "views/layout.erb"]
+  s.files = ["LICENSE", "README.md", "Rakefile", "VERSION.yml", "bin/terror", "config/Rakefile.default", "config/config.ru.default", "config/terror.yml.default", "config/thin.yml.default", "lib/tasks/feeds.rake", "lib/terror.rb", "lib/terror/feed_fetcher.rb", "lib/terror/helper.rb", "lib/terror/installer.rb", "lib/terror/post.rb", "public/style.css", "terror.gemspec", "terror_aggregator.rb", "test/feeds/example.xml", "test/post_test.rb", "test/spec_helper.rb", "test/terror_test.rb", "views/feed.builder", "views/index.erb", "views/layout.erb"]
   s.has_rdoc = true
   s.homepage = %q{http://gravityblast.com/projects/terror/}
   s.post_install_message = %q{Run terror projectname and start aggregating.}
