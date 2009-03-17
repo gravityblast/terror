@@ -12,7 +12,7 @@ module Terror
     end
     
     def rfc_3339(time)
-      time.strftime("%Y-%m-%dT%H:%M:%SZ")
+      time.strftime("%Y-%m-%dT%H:%M:%SZ") if time
     end
     
     def newer_page?

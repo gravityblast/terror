@@ -6,10 +6,10 @@ module Terror
     include FeedFetcher
     
     property :id,     Integer,  :serial => true
-    property :title,  String,   :nullable => false
-    property :url,    String,   :nullable => false, :format => /^http|https:\/\//
-    property :source, String
-    property :date,   Date        
+    property :title,  String,   :nullable => false, :length => 255
+    property :url,    String,   :nullable => false, :length => 255, :index => true, :format => /^http|https:\/\//
+    property :source, String,   :length => 255
+    property :date,   Time,     :nullable => false
     
     def self.paginate(options = {})
       per_page     = options[:per_page]

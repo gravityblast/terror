@@ -23,11 +23,16 @@ describe 'Creating posts' do
     post = Terror::Post.create(:url => 'example.com')
     post.errors.on(:url).should_not be_nil
   end
+  
+  it 'should validate presence of date' do    
+    @blank_post.errors.on(:date).should_not be_nil
+  end
     
   it 'should create post' do    
-    post = Terror::Post.create(:url => 'http://example.com/', :title => 'Example')
+    post = Terror::Post.create(:url => 'http://example.com/', :title => 'Example', :date => Time.now)
     post.should be_valid
   end
+  
 end
 
 describe 'Fetching feed' do

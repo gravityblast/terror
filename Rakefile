@@ -19,9 +19,12 @@ begin
     gem.executables = ['terror']
     gem.post_install_message = 'Run terror projectname and start aggregating.'
 
-    gem.add_dependency 'sinatra', ['>= 0.9.1.1']
+    gem.add_dependency 'sinatra',         ['>= 0.9.1.1']
     gem.add_dependency 'feed-normalizer', ['>= 1.5.1']
-    gem.add_dependency 'activerecord', ['>= 2.2.2']
+    gem.add_dependency 'dm-core',         ['>= 0.9.10']
+    gem.add_dependency 'dm-validations',  ['>= 0.9.10']
+    gem.add_dependency 'dm-aggregates',   ['>= 0.9.10']
+    gem.add_dependency 'do_sqlite3',      ['>= 0.9.11']
   end
 rescue LoadError
 end

@@ -9,6 +9,7 @@
     <id>http://example.com/post-1</id>
     <link type="text/html" rel="alternate" href="http://example.com/post-1"/>
     <updated>2009-03-15T01:11:33Z</updated>
+		<published>2009-03-15T01:11:33Z</published>
     <title>Title 1</title>
     <author>
       <name>author</name>
@@ -19,6 +20,7 @@
     <id>http://example.com/post-2</id>
     <link type="text/html" rel="alternate" href="http://example.com/post-2"/>
     <updated>2009-03-15T01:11:33Z</updated>
+		<published>2009-03-15T01:11:33Z</published>
     <title>Title 2</title>
     <author>
       <name>author</name>
