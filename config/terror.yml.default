@@ -3,14 +3,14 @@ global:
   subtitle: the micro aggregator
 database:
   development:
-    adapter: sqlite3
-    database: db/terror_dev.sqlite3
+    :adapter: sqlite3
+    :database: db/terror_dev.sqlite3
   test:
-    adapter: sqlite3
-    database: ':memory:'
+    :adapter: sqlite3
+    :database: ':memory:'
   production:
-    adapter: sqlite3
-    database: db/terror.sqlite3
+    :adapter: sqlite3
+    :database: db/terror.sqlite3
 feeds:
   - http://example.com/rss
   - http://example.com/rss2

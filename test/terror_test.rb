@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
-describe 'Test' do
+describe 'Getting pages' do
   include Sinatra::Test    
   
   it 'should show posts' do

@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{terror}
-  s.version = "0.2.2"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2009-03-16}
+  s.date = %q{2009-03-17}
   s.default_executable = %q{terror}
   s.email = %q{andrea@gravityblast.com}
   s.executables = ["terror"]
@@ -27,15 +27,24 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<sinatra>, [">= 0.9.1.1"])
       s.add_runtime_dependency(%q<feed-normalizer>, [">= 1.5.1"])
-      s.add_runtime_dependency(%q<activerecord>, [">= 2.2.2"])
+      s.add_runtime_dependency(%q<dm-core>, [">= 0.9.10"])
+      s.add_runtime_dependency(%q<dm-validations>, [">= 0.9.10"])
+      s.add_runtime_dependency(%q<dm-aggregates>, [">= 0.9.10"])
+      s.add_runtime_dependency(%q<do_sqlite3>, [">= 0.9.11"])
     else
       s.add_dependency(%q<sinatra>, [">= 0.9.1.1"])
       s.add_dependency(%q<feed-normalizer>, [">= 1.5.1"])
-      s.add_dependency(%q<activerecord>, [">= 2.2.2"])
+      s.add_dependency(%q<dm-core>, [">= 0.9.10"])
+      s.add_dependency(%q<dm-validations>, [">= 0.9.10"])
+      s.add_dependency(%q<dm-aggregates>, [">= 0.9.10"])
+      s.add_dependency(%q<do_sqlite3>, [">= 0.9.11"])
     end
   else
     s.add_dependency(%q<sinatra>, [">= 0.9.1.1"])
     s.add_dependency(%q<feed-normalizer>, [">= 1.5.1"])
-    s.add_dependency(%q<activerecord>, [">= 2.2.2"])
+    s.add_dependency(%q<dm-core>, [">= 0.9.10"])
+    s.add_dependency(%q<dm-validations>, [">= 0.9.10"])
+    s.add_dependency(%q<dm-aggregates>, [">= 0.9.10"])
+    s.add_dependency(%q<do_sqlite3>, [">= 0.9.11"])
   end
 end
